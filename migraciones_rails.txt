@@ -1,0 +1,4 @@
+rails generate migration add_user_id_to_articles user:references
+
+rails g scaffold comment user:references article:reference body:text// un usuario tiene muchos comentarios un blog tiene muchos comentarios
+relaciones automaticas

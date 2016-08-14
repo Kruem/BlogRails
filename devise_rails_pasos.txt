@@ -1,0 +1,14 @@
+1. instalar gema 
+gem "devise"
+2. bundle install
+3.instalar devise
+rails g devise:install
+4. leer las instrucciones y pegar
+  <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+en aplication
+5.generar un model
+rails g devise User
+6 revisar la migracion y despues migrar
+7. generar vistas 
+rails g devise:views
