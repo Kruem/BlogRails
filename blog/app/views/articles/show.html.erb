@@ -1,0 +1,22 @@
+<h1><%= @article.title %></h1>
+<% unless @article.user.nil?%>
+<p>Escrito por: <%=@article.user.email %></p>
+<p>Visitas: <%=@article.visits_count %></p>
+<% end %>
+<div class="">
+  <%= @article.body%>
+</div>
+<div class="field">
+  <h3>Comentarios</h3>
+  <%=render "comments/form" %>
+  <ul>
+    <% @article.comments.each do |comment| %>
+    <li>
+      <%= comment.body%>-<%= comment.user.email%>
+    </li>
+    <% end%>
+  </ul>
+</div>
+<div class="">
+  <%= link_to "Editar", edit_article_path(@article)%>
+</div>
